@@ -1,0 +1,155 @@
+Hypothesis Testing  
+
+1.  Population
+2.  Sample
+3.  Null Hypothesis (H₀)
+4.  Alternative Hypothesis (H₁ or Ha)
+5.  Mean (μ or x bar)
+6.  Standard Deviation (σ or s)
+7.  Standard Error (SE)
+8.  Test Statistic (z or t)
+9.  Degrees of Freedom (df)
+10. Significance Level (α)
+11. p-value
+12. Critical Value
+13. Type I Error (False Positive)
+14. Type II Error (False Negative)
+15. Power of the Test
+16. Confidence Interval (CI)
+17. One-Tailed Test
+18. Two-Tailed Test
+19. Non-parametric Tests
+20. Bayes Factor
+
+
+
+==============================
+STANDARD DEVIATION (σ or s)
+==============================
+Standard deviation measures the average spread of data around the mean.
+
+- Low SD → data is tightly clustered.
+- High SD → data is widely spread.
+
+2. FORMULAS:
+
+A) Population Standard Deviation (σ):
+σ = sqrt( (1/N) * Σ(xi - μ)^2 )
+
+B) Sample Standard Deviation (s):
+s = sqrt( (1/(n-1)) * Σ(xi - x̄)^2 )
+
+Note: Use (n - 1) for sample to avoid underestimating variability.
+
+-----------------------------------------------------
+3. WHY USE n - 1 IN SAMPLE?
+-----------------------------------------------------
+Using (n - 1) corrects bias when estimating population SD from a sample.
+
+- Calculating the sample mean uses 1 degree of freedom.
+- Only (n - 1) values can vary freely.
+- Dividing by n underestimates spread; (n - 1) compensates.
+
+This adjustment is called **Bessel’s Correction**.
+
+
+==============================
+STANDARD ERROR (SE)
+==============================
+
+Standard Error (SE) measures how much the sample mean (x̄) is expected to vary from the true population mean (μ). 
+It quantifies the precision of the sample mean as an estimate of the population mean.
+
+- Smaller SE → more reliable estimate
+- Larger SE → less precise estimate
+
+SE = s / √n
+
+- SE decreases as sample size increases.
+- With more data, your sample mean is closer to the true mean.
+- SE is used in calculating confidence intervals and test statistics (e.g., t = (x̄ - μ) / SE).
+
+- Standard Deviation (s) measures spread of **individual data points**.
+- Standard Error (SE) measures spread of **sample means** from the population mean.
+
+
+==============================
+TEST STATISTIC (z or t)
+==============================
+
+A Test Statistic is a standardized value that measures how far a sample statistic 
+(e.g., sample mean) is from the null hypothesis value, in units of standard error.
+It tells you how extreme your sample result is compared to what you'd expect under H₀.
+
+WHY IS IT USED?
+
+To determine whether to reject the null hypothesis (H₀).
+It converts observed differences into a common scale (z or t) that can be compared 
+to critical values or used to compute a p-value.
+
+Test Statistic = (Sample Estimate - Hypothesized Value) / Standard Error
+
+TYPES OF TEST STATISTICS:
+
+A) Z-Test Statistic:
+
+Used when:
+- Population standard deviation (σ) is known
+- Sample size is large (n > 30)
+
+Formula:
+z = (x̄ - μ) / (σ / √n)
+
+B) T-Test Statistic:
+
+Used when:
+- Population standard deviation (σ) is unknown
+- Sample size is small (n ≤ 30)
+
+t = (x̄ - μ) / (s / √n)
+
+INTERPRETATION:
+A larger absolute test statistic (e.g., z = 3.2 or t = -2.8) means your sample result 
+is far from H₀ — more likely to reject H₀.
+
+It is compared against a critical value or used to find the p-value.
+
+
+==============================
+SIGNIFICANCE LEVEL (α)
+==============================
+
+Significance Level (α) is the threshold used in hypothesis testing to decide whether to reject the null hypothesis (H₀).
+It represents the maximum probability of making a Type I Error — rejecting H₀ when it is actually true.
+
+α = 0.05 → 5% chance of rejecting a true null hypothesis
+
+Sets the cutoff for statistical significance.
+If p-value < α → reject H₀ (evidence is statistically significant)
+If p-value ≥ α → fail to reject H₀ (evidence is not strong enough)
+
+Choose α based on how risky it is to make a false positive:
+α = 0.01 (1% chance of false positive)
+You're only willing to accept a 1% probability of making a wrong claim that the drug works.
+You demand stronger evidence to reject H₀.
+
+==============================
+P-VALUE
+==============================
+
+The p-value is the probability of getting the observed sample result (or something more extreme) 
+assuming the null hypothesis (H₀) is true.
+It measures the strength of evidence against H₀.
+
+p < α means:
+“The chance of this happening under H₀ is so low, we doubt H₀ is true.”
+If p-value < α → Reject H₀ (statistically significant)
+If p-value ≥ α → Fail to reject H₀ (not significant)
+
+Lower p-value = stronger evidence against H₀.
+
+- A small p-value means the observed result is unlikely by random chance alone.
+- p-value is NOT the probability that H₀ is true.
+- p-value is NOT the size of the effect.
+- Always interpret p-value in the context of α and the experiment.
+

@@ -1,0 +1,44 @@
+Scenario:
+
+A soda company claims that their 500 ml drink contains on average 35g of sugar.
+You collect a sample and suspect the actual sugar content is higher than claimed.
+
+Objective:
+Test whether the true mean sugar content is greater than 35g using a one-sample z-test.
+
+Data:
+Population mean (μ₀ under H₀) = 35g
+Sample size (n) = 100
+Sample mean (x̄) = 36g
+Population standard deviation (σ) = 2g
+Significance level (α) = 0.05
+
+Step 1: Define Hypotheses
+
+Since you suspect it's more, this is a right-tailed test:
+- Null Hypothesis (H₀): μ = 35g
+- Alternative Hypothesis (H₁): μ > 35g
+
+Step 2: Calculate the Test Statistic (z)
+
+SE = σ / √n = 2 / √100 = 0.2
+z = (x̄ - μ) / SE = (36 - 35) / 0.2 = 1 / 0.2 = 5.0
+
+Step 3: Find the Critical Value
+
+For α = 0.05 (right-tailed test):
+Critical z-value = 1.645
+
+Step 4: Decision Rule
+
+Compare z = 5.0 to the critical value:
+Since 5.0 > 1.645 → Reject H₀
+
+Or use p-value:
+p-value for z = 5.0 ≈ 0.0000003
+Since p < 0.05 → Reject H₀
+
+Step 5: Conclusion
+
+There is strong statistical evidence that the true average sugar content is greater than 35g.
+The soda company may be underreporting sugar in its product.
