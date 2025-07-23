@@ -50,7 +50,7 @@ Using (n - 1) corrects bias when estimating population SD from a sample.
 - Only (n - 1) values can vary freely.
 - Dividing by n underestimates spread; (n - 1) compensates.
 
-This adjustment is called **Bessel’s Correction**.
+This adjustment is called Bessel’s Correction.
 
 
 ==============================
@@ -69,8 +69,8 @@ SE = s / √n
 - With more data, your sample mean is closer to the true mean.
 - SE is used in calculating confidence intervals and test statistics (e.g., t = (x̄ - μ) / SE).
 
-- Standard Deviation (s) measures spread of **individual data points**.
-- Standard Error (SE) measures spread of **sample means** from the population mean.
+- Standard Deviation (s) measures spread of individual data points.
+- Standard Error (SE) measures spread of sample means from the population mean.
 
 
 ==============================
@@ -109,11 +109,11 @@ Used when:
 t = (x̄ - μ) / (s / √n)
 
 INTERPRETATION:
+
 A larger absolute test statistic (e.g., z = 3.2 or t = -2.8) means your sample result 
 is far from H₀ — more likely to reject H₀.
 
 It is compared against a critical value or used to find the p-value.
-
 
 ==============================
 SIGNIFICANCE LEVEL (α)

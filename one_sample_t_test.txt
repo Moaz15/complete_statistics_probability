@@ -1,0 +1,64 @@
+ONE-SAMPLE T-TEST
+
+SCENARIO:
+
+You are testing a new diet plan. The average weight loss from past diets was 0 kg.
+You collect a sample of 15 participants using the new diet and observe their average weight loss.
+You want to know: Is the new diet significantly different (better) in terms of weight loss?
+Use a one-sample t-test (because the sample size is small and population standard deviation is unknown).
+
+DATA:
+
+Population mean under H₀ (μ₀) = 0 kg  
+Sample size (n) = 15  
+Sample mean (x̄) = 2.8 kg  
+Sample standard deviation (s) = 2.5 kg  
+Significance level (α) = 0.05
+
+HYPOTHESES:
+
+H₀: μ = 0  
+H₁: μ > 0   (Right-tailed test — testing for improvement)
+
+FORMULA:
+
+t = (x̄ - μ₀) / (s / √n)
+SE = s / √n = 2.5 / √15 ≈ 0.645
+t = (2.8 - 0) / 0.645 ≈ 4.34
+
+Degrees of freedom (df) = n - 1 = 14
+
+CRITICAL VALUE:
+
+From t-table at α = 0.05 and df = 14:
+Critical t ≈ 1.761
+
+Decision Rule:
+- If t > 1.761 → Reject H₀
+Since 4.34 > 1.761 → Reject H₀
+
+P-VALUE METHOD:
+
+Using a t-distribution calculator:
+p-value ≈ 0.0005
+
+Since p < 0.05 → Reject H₀ 
+
+CONCLUSION:
+
+There is strong statistical evidence that the average weight loss using the new diet
+is significantly greater than 0. The diet appears to be effective.
+
+
+SUMMARY OF CONCEPTS:
+
+- One-sample t-test is used when:
+  • You are comparing one sample mean to a known value
+  • Population standard deviation (σ) is unknown
+  • Sample size is small (n < 30)
+
+- It uses the t-distribution, not z-distribution
+- Requires degrees of freedom: df = n - 1
+- Decision can be made using either:
+  • t vs. critical value
+  • p-value vs. α

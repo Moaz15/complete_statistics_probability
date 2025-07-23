@@ -1,0 +1,55 @@
+TWO-SAMPLE T-TEST (EQUAL VARIANCES ASSUMED)
+
+SCENARIO:
+
+You're testing if two different thumbnails  used for the same show affect average user listening time.
+
+- Group A: Users who saw Thumbnail Version A
+- Group B: Users who saw Thumbnail Version B
+
+You assume that the variability in listening time is similar for both groups.
+
+2. DATA:
+
+Thumbnail A group:
+- n₁ = 100
+- Mean listening time = 22.3 minutes
+- SD = 6.5 minutes
+
+Thumbnail B group:
+- n₂ = 100
+- Mean listening time = 20.1 minutes
+- SD = 6.3 minutes
+
+Significance level (α) = 0.05
+
+3. HYPOTHESES:
+
+H₀: μ₁ = μ₂       (No difference in average listening time)
+H₁: μ₁ ≠ μ₂       (There is a difference)
+
+4. FORMULA:
+
+Pooled SD:
+
+Sp = sqrt [ ((n₁-1)s₁² + (n₂-1)s₂²) / (n₁ + n₂ - 2) ]
+   = sqrt [ (99)(42.25) + (99)(39.69) / 198 ] ≈ sqrt(40.97) ≈ 6.40
+
+Standard Error:
+
+SE = Sp * sqrt(1/n₁ + 1/n₂) = 6.40 * sqrt(1/100 + 1/100) ≈ 0.905
+
+t = (22.3 - 20.1) / 0.905 ≈ 2.43
+
+df = n1 + n2 -2  = 198 
+
+DECISION:
+
+Critical t (two-tailed, df = 198, α = 0.05) ≈ ±1.972
+
+Since 2.43 > 1.972 → Reject H₀
+
+p-value ≈ 0.016 < 0.05 → Reject H₀
+
+
+
