@@ -1,0 +1,40 @@
+A. objective and scope :
+
+1. what is the precise objective - increase the metrics for the complete product or specific product
+2. what is the current baseline metric for the desired flow 
+3. what is the exact change in the flow - guessing about causal drivers.
+4. who will be the target users - depends on the product , like global or limited to certain cities and markets 
+   which platforms are in scope ( for online products ) -- like Android, IOS , Web 
+   Are there any segments excluded or not for the specifed target users , like new users or old users ...
+5. Do we have the data to monitor the metric and how we will quantify the success metric 
+   do we already monitor the logs for the specific metric , is that reliable or not , are we already monitoring success metic with certain guardrail 
+
+B . Unit of Randomization : 
+
+- think at will level of randomization would make sense -- at user level , at demographic level ....
+- once decided , consistency matters a lot - 
+- for implementation we should have mechanism eg hashing at user level 
+- for a large traffice case we can follow ramp up strategy - first implement for 10-20% user once metrics are stable we can scale to desired percentage for correct evaluation 
+
+C . Experiment Allocation Strategy :
+
+- set the Unit of Randomization
+- set the traffic allocation if required go for partial allocation 
+- mentain the consistency using hashing or other techniques 
+
+D. Primary Metric :
+
+-choose the metric which will get most impacted the experiment and is our target metric 
+- it should not be influneced by downstream market place factors 
+- apply Intention-to-Treat framework : 
+You analyze users based on the group they were assigned to, not based on what they actually did or saw.
+If you only analyze users who actually saw or used the feature, you break randomization and introduce bias.
+ 
+E. Secondary Metrics : 
+
+These metrics are decided once the user accepts the success metric - these metrics should be like 
+-  not effecting the flow
+-  not effecting the business income 
+-  depends on the product itself 
+- generally 4-5 Secondary metrics are enough 
+

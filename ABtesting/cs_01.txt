@@ -1,0 +1,37 @@
+Scenario: Improving Rider Trip Acceptance Rate (CTR) with a New Upfront Fare Display
+
+Uber wants to test a new upfront fare display design on the rider app.
+The new design shows:
+Estimated fare
+Estimated pickup time
+Expected driver rating
+A confidence interval of price (e.g., “fare may vary between ₹210–240”)
+The hypothesis is that more transparency = higher trip acceptance rate.
+
+You are asked to design an A/B test.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Clarification section
+
+“What is the precise objective — increase trip acceptance rate for all trips, or only specific products (e.g., UberX, Uber Auto, high-ETA trips, etc.)?”
+“What is the current baseline trip acceptance rate (CTR) for the affected flows?”
+
+New vs Old Experience
+“Which of these components are new vs already present in the old design? Especially the price range / confidence interval
+ — that seems most likely to change user behavior.”
+
+Target Population / Platforms
+
+“Is this experiment for all riders globally, or limited to certain cities/markets?”
+“Which platforms are in scope — Android, iOS, web?”
+“Any segments excluded? (new users, corporate accounts, etc.)”
+
+Data & Success Criteria
+
+do we have the data to monitor the CTR
+
+Do we already log trip offer impressions and accept/decline events at the rider level so we can compute CTR reliably?”
+“Is there a predefined success criterion? e.g., +X% CTR with no degradation in ETA or cancellations?”
+
+

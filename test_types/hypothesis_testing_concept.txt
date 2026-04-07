@@ -21,8 +21,6 @@ Hypothesis Testing
 19. Non-parametric Tests
 20. Bayes Factor
 
-
-
 ==============================
 STANDARD DEVIATION (σ or s)
 ==============================
@@ -51,7 +49,6 @@ Using (n - 1) corrects bias when estimating population SD from a sample.
 - Dividing by n underestimates spread; (n - 1) compensates.
 
 This adjustment is called Bessel’s Correction.
-
 
 ==============================
 STANDARD ERROR (SE)
