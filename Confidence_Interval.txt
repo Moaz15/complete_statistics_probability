@@ -1,0 +1,191 @@
+1. What is a Confidence Interval (CI)?
+---------------------------------------------------------------------------------------------
+A confidence interval is a range of values used to estimate an unknown population parameter.
+
+Instead of saying:
+“Conversion rate = 12%”
+We say:
+“Conversion rate is between 10% and 14% with 95% confidence”
+
+CI ≠ probability of parameter
+CI = method reliability
+
+Correct interpretation:
+If we repeated the experiment many times, 95% of the constructed intervals would contain the true parameter
+
+❌ Wrong:
+“There is 95% probability the true value lies in this interval”
+
+2. Core Formula
+-------------------------------------------------------------------------------------------
+For mean (when variance known or large n):
+CI = Xˉ ± Z ⋅ (σ/√n)
+
+Where:
+
+Xˉ = sample mean
+Z = Z-score for desired confidence level (critical value)
+σ = population standard deviation
+n = sample size
+
+common Z values:
+confidence level = 90% → Z = 1.645
+confidence level = 95% → Z = 1.96
+confidence level = 99% → Z = 2.576
+
+3. Types of Confidence Interval
+-------------------------------------------------------------------------------------------
+(A) Mean CI (σ known)
+Uses Z-distribution
+
+(B) Mean CI (σ unknown)
+Uses t-distribution
+
+Important in interviews:
+Small sample → t-distribution
+Large sample → approx Z
+
+(C) Proportion CI
+
+Used for:
+CTR
+Conversion rate
+Retention
+
+Formula :  CI = p ± Z * sqrt(p(1-p)/n)
+
+(D) Difference of Means
+
+Used in:
+
+A/B testing (revenue, time spent). 
+(xˉ1​−xˉ2​)±Z⋅SE
+
+(E) Difference of Proportions
+(p1​−p2​)±Z.sqrt(p1(1−p1)/n1 + p2(1−p2)/n2)
+
+Experiment analysis
+Feature launches
+
+What affects CI width?
+Factor	                           Effect
+↑ Sample size	                   ↓ Width
+↑ Variance	                       ↑ Width
+↑ Confidence level	               ↑ Width
+
+
+Confidence Level vs Significance Level
+α=1−confidence level
+Example:
+95% CI → α = 0.05
+
+CI and Hypothesis Testing
+---------------------------------------------------------
+| Hypothesis Test | Confidence Interval    |
+| --------------- | ---------------------- |
+| p-value         | CI range               |
+| Reject H₀       | CI excludes null value |
+
+Testing:
+H0​:p1​−p2​=0
+If CI does NOT include 0 → significant
+If CI includes 0 → not significant
+
+Assumptions
+Random sampling
+Independence
+Normality (or large n → CLT)
+
+------------------------------------------------------------------------------------------------------------------------------------------
+Example :
+1. Why Confidence Interval in A/B Testing?
+In A/B testing, you compare:
+A (control) → current product
+B (variant) → new feature
+
+👉 You don’t just want:
+“B is +2% better”
+
+👉 You want:
+“How sure am I that B is actually better?”
+That’s where Confidence Interval (CI) helps.
+
+CI gives you a range of possible true impact.
+Instead of:
+Lift = +2%
+You say:
+Lift is between +0.5% and +3.5% (95% CI)
+
+Real Feature Launch Example
+🎯 Feature:
+New “1-click checkout button”
+
+A/B Test Results:
+| Group | Conversion Rate |
+| ----- | --------------- |
+| A     | 10%             |
+| B     | 12%             |
+
+👉 Lift = +2%
+
+Problem
+Is this +2% real OR just random noise?
+
+Use Confidence Interval
+
+You compute:
+👉 95% CI for lift = [+0.5%, +3.5%]
+
+Interpretation
+Worst case → +0.5%
+Best case → +3.5%
+
+Entire interval is above 0
+B is very likely better than A
+
+Think of CI as answering 3 questions:
+
+1. Is there an effect?
+👉 Check if CI excludes 0
+
+2. How big is the effect?
+👉 Look at CI range
+
+3. Is it worth it?
+👉 Business decision
+
+
+“We are 95% sure the feature will increase conversion between +0.5% and +3.5%”
+👉 If entire range is positive → safe bet
+👉 If range crosses 0 → risky bet
+
+
+Example2 : Retention
+| Group | Users | Retained (Day 7) | Retention |
+| ----- | ----- | ---------------- | --------- |
+| A     | 1000  | 400              | 40%       |
+| B     | 1000  | 450              | 45%       |
+
+
+Step 1: Compute Lift
+👉 Lift = 45% − 40% = +5%
+
+Step 2: Compute CI
+👉 95% CI = [+1%, +9%]
+
+Step 3: Interpret
+CI excludes 0 → ✅ statistically significant
+Range is positive → ✅ improvement
+
+Step 4: Business Decision
+Ask:
+Is +1% minimum gain acceptable?
+Does +5% avg improve LTV/DAU?
+
+If yes → Launch 🚀
+
+
+
+
+
+

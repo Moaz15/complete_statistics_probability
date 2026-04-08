@@ -1,5 +1,5 @@
 1. What is the Central Limit Theorem?
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 The Central Limit Theorem states that the sampling distribution of the sample mean approaches a normal distribution as sample size increases,
 regardless of the original data distribution. The mean of this distribution equals the population mean, and the variance equals sigma-squared over n.
 This is why we can use normal-based inference in A/B testing and model evaluation — even when the raw data is skewed or binary.
@@ -28,7 +28,7 @@ even when we don't know the original population distribution.
 Real-World Intuitions
 
 Example 1: User Analytics (Skewed Data)
-------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 You track time spent per user — a few heavy users skew the data badly
 But if you take many samples of users and compute average time per sample
 → Those averages will follow a normal distribution
@@ -134,7 +134,7 @@ You can say "my model's accuracy is 87% ± 2%" — that ± comes from CLT
 
 
 CLT vs Law of Large Numbers (LLN)
-----------------------------------
+----------------------------------------------------------------------
 Concept	         What it says
 LLN	             As n increases, sample mean converges to the true mean
 CLT	             The distribution of that sample mean becomes normal
@@ -142,6 +142,7 @@ CLT	             The distribution of that sample mean becomes normal
 LLN → "Your average watch time will eventually stabilize at the true value"
 CLT → "The distribution of that average is a bell curve"
 LLN tells you where the mean lands. CLT tells you what shape the distribution of means has.
+
 
 Bootstrap
 ---------------------------------------------------------------
